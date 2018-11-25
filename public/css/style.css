@@ -1,0 +1,382 @@
+/* ================================= 
+  Base Styles
+==================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  color: #3a3a3a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1170px;
+}
+
+.button {
+  background: none;
+  height: 50px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+/* ---- Header ---- */
+#main-header {
+  background: #fff;
+  padding: 5px;
+}
+#main-header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#main-header .logo, #main-header nav a {
+  padding: 10px;
+}
+@media (min-width: 500px) {
+  #main-header .logo, #main-header nav a {
+    padding: 10px 15px;
+  }
+}
+#main-header .logo {
+  font-size: 1.35em;
+  color: #28415E;
+}
+#main-header nav a {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  color: #517fb5;
+}
+@media (min-width: 500px) {
+  #main-header nav a {
+    font-size: 0.95em;
+  }
+}
+
+/* ---- Intro ---- */
+#intro {
+  background: #EEEBE4;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  padding: 10px 0;
+  margin: 5px;
+  height: 600px;
+}
+#intro .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #28415E;
+  margin-top: 0px;
+}
+#intro .cta .splash {
+  display: none;
+}
+@media (min-width: 500px) {
+  #intro .cta .splash {
+    display: block;
+    width: 200px;
+  }
+}
+#intro .cta img {
+  margin-bottom: 1em;
+}
+#intro .cta h1, #intro .cta p, #intro .cta .button {
+  text-align: center;
+}
+#intro .cta h1 {
+  margin: 0;
+}
+#intro .cta p {
+  margin-bottom: 1.5em;
+}
+#intro .cta .button {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: inset 0 0 0 2px #B79D55;
+  color: #28415E;
+}
+#intro .cta .button:hover, #intro .cta .button:focus {
+  background: #B79D55;
+  color: #fff;
+}
+
+/* ---- Tours ---- */
+#tours {
+  padding-top: 4em;
+}
+#tours h2 {
+  margin: 0;
+  text-align: center;
+}
+#tours form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 4em 0;
+  max-width: 600px;
+}
+@media (min-width: 500px) {
+  #tours form {
+    flex-direction: row;
+  }
+}
+#tours form input, #tours form button {
+  margin: 0 1em;
+  padding: 10px;
+  height: 50px;
+  outline: 0;
+}
+#tours form input {
+  background-color: #fff;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #494f4f;
+  -webkit-transition: border-color 0.4s;
+  -moz-transition: border-color 0.4s;
+  transition: border-color 0.4s;
+}
+#tours form input:focus {
+  border-color: #879090;
+}
+@media (min-width: 500px) {
+  #tours form input {
+    flex: 3;
+    margin-bottom: 0;
+  }
+}
+#tours form .button {
+  border: 0;
+  box-shadow: inset 0 0 0 2px #879090;
+  color: #494f4f;
+}
+#tours form .button:hover, #tours form .button:focus {
+  background: #879090;
+  color: #fff;
+}
+@media (min-width: 500px) {
+  #tours form .button {
+    flex: 100px;
+  }
+}
+#tours ul, #tours ul li, #tours ul li div {
+  display: flex;
+}
+#tours ul {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#tours ul li {
+  background: rgba(0, 0, 0, 0.35);
+  position: relative;
+  flex-direction: column;
+  cursor: pointer;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  transition: background 0.4s;
+}
+#tours ul li:hover {
+  background: rgba(0, 0, 0, 0);
+}
+@media (min-width: 500px) {
+  #tours ul li {
+    flex: 50%;
+  }
+}
+@media (min-width: 800px) {
+  #tours ul li {
+    flex: 25%;
+  }
+}
+#tours ul li div {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
+#tours ul li div h3, #tours ul li div h4 {
+  margin: 0;
+}
+#tours ul li div h3 {
+  margin-bottom: 0.35em;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#tours ul li div h4 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+#tours ul li img {
+  position: relative;
+  z-index: -1;
+}
+
+/* ---- Pricing ---- */
+#pricing {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0;
+}
+#pricing article {
+  background: #edf4f7;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 0.85em 1em;
+  padding: 1em;
+  border-radius: 3px;
+}
+#pricing article:last-child {
+  margin-bottom: 0;
+}
+#pricing article h3 {
+  color: #28415E;
+}
+#pricing article p {
+  margin: 0 0 1em;
+  font-size: 0.95em;
+  line-height: 24px;
+  font-weight: 400;
+}
+#pricing article p:last-of-type {
+  margin-bottom: 3em;
+}
+#pricing article .button {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  margin-top: auto;
+  padding: 10px 30px;
+  box-shadow: inset 0 0 0 2px #375a82;
+  color: #28415E;
+}
+#pricing article .button:hover, #pricing article .button:focus {
+  background: #375a82;
+  color: #fff;
+}
+@media (min-width: 800px) {
+  #pricing {
+    flex-direction: row;
+  }
+  #pricing article {
+    margin-bottom: 0;
+  }
+}
+
+/* ---- Footer ---- */
+#main-footer {
+  background: #d9e4ea;
+  flex: 1;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.login-trigger {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom right, #B05574, #F87E7B);
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: relative; 
+  top: 50%;
+}
+
+/*Modal*/
+h4 {
+  font-weight: bold;
+  color: #fff;
+}
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+.modal-content {
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+// counteract the pointer-events: none; in the .modal-dialog
+  pointer-events: auto;
+  background-color: $modal-content-bg;
+  background-clip: padding-box;
+  border: $modal-content-border-width solid $modal-content-border-color;
+@include border-radius($modal-content-border-radius);
+@include box-shadow($modal-content-box-shadow-xs);
+// Remove focus outline from opened modal
+outline: 0;
+}
+.form-control {
+  margin: 1em 0;
+}
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color: #eee;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.login {
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid #FAB87F;
+  color: #FAB87F;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.login:hover {
+  background: #FAB87F;
+  color: #fff;
+}
